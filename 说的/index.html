@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dsa</title>
+</head>
+<style>
+    .panel {
+        border: 1px solid #555;
+        max-width: 300px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    .panel>* {
+        padding: 15px;
+    }
+
+    .panel .top,
+    .panel .cont {
+        border-bottom: 1px solid #222;
+    }
+</style>
+
+<body>
+
+    <div id="epp">
+        <panel>
+            <div slot="top">
+                yo yo yo
+            </div>
+            <div slot="cont">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, temporibus assumenda nemo facere
+                explicabo delectus optio? Minima facilis ut, aliquam odio quia, harum ipsum veniam ex cupiditate
+                delectus iusto corrupti!
+            </div>
+            <div slot="foot">
+                更多信息
+            </div>
+        </panel>
+        <panel>
+
+        </panel>
+
+    </div>
+
+    <template id="panel-tpl">
+        <!-- //默认只能有一个插槽slot -->
+        <div class="panel">
+            <div class="top">
+                <slot name="top">           <!-- //用名称指代   在上面用相同名称选择 -->
+                    </solt>
+            </div>
+            <div class="cont">
+                <slot name="cont">
+                    </slots>
+            </div>
+            <div class="foot">
+                <slot name="foot">
+                    </slots>
+            </div>
+        </div>
+    </template>
+    <script src="lib/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
